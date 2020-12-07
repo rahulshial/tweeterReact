@@ -1,0 +1,86 @@
+.nav-bar {
+  display: flex;
+  height: 120px;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 1;
+  z-index: 9999;
+}
+
+.page-title {
+  font-family: 'Bungee', cursive;
+  font-weight: 300;
+  font-size: 35px;
+  margin: 1.5em;
+}
+
+.write-tweet {
+  display: flex;
+  flex-direction: column;
+}
+
+.write-tweet-title {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 1.5em;
+  margin-bottom: 5px;
+  margin-top: 15px
+}
+
+.compose-button {
+  color: #FFFFFF;
+  background-color: transparent;
+  font-size: 20px;
+  border: 0;
+  outline: none;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.compose-button {
+  animation-name: hvr-wobble-vertical;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-bar {
+    background-color: #7f8488;
+    background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+  }
+}

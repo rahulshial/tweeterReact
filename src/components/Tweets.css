@@ -1,0 +1,83 @@
+/* Section */
+
+.tweet-list {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 5px;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+  opacity: 0.5;
+}
+
+/* Header */
+
+.tweet-list-header {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.avatar-name-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  display: flex;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.user-handle {
+  margin-right: 20px;
+  opacity: 0;
+}
+
+.tweet-list:hover {
+  box-shadow: 10px 10px 5px grey;
+  opacity: 1;
+  font-weight: bold;
+}
+
+.tweet-list:hover .user-handle {
+  opacity: 0.5;
+}
+
+/* Body */
+
+p {
+  display: flex;
+  margin-left: auto;
+  max-width: 100%;
+}
+
+/* Footer */
+
+.tweet-list-footer {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  border-top: solid;
+  border-top-width: 5px;
+  padding-bottom: 0px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.fa-flag, .fa-heart, .fa-retweet {
+  margin-right: 15px;
+  color: #4056A1;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    padding: 0 2rem;
+  }
+}

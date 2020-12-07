@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Tweeter - Home Page</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
+  <!-- External site for font awesome link (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <!-- Font Family -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweet-list.css" type="text/css" />
+
+  <!-- External JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Moment.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg=="
+    crossorigin="anonymous"></script>
+
+  <!-- App JS -->
+  <!-- <script type="text/javascript" src="/scripts/composer-char-counter.js" async defer></script>
+  <script type="text/javascript" src="/scripts/client.js" async defer></script> -->
+</head>
+
+<body>
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <!-- Top nav bar (fixed) -->
+  <nav class="nav-bar">
+    <span class="page-title">TWEETER</span>
+    <div class="write-tweet">
+      <span class="write-tweet-title"><strong>Write</strong>&nbsp;a new tweet</span>
+      <button type="compose" class="compose-button"><i class="fas fa-angle-double-down" aria-hidden="true"></i></button>
+    </div>
+  </nav>
+  <header class="header">
+    <img src="/images/profile-hex.png">
+    <h2>Rahul S</h2>
+  </header>
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+    <section class="new-tweet">
+      <div class="error-line">
+        <p class="error-message"></p>
+      </div>
+      <form class="tweet-form">
+        <label for="tweet-text">What are you humming about?</label>
+        <textarea name="text" id="tweet-text"></textarea>
+        <div class="box-button-char-count">
+          <div>
+            <button class="tweet-button" type="submit">Tweet</button>
+          </div>
+          <div>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </div>
+      </form>
+    </section>
+    <section>
+      <article class="tweet-container">
+        <div class="tweet-list">
+          <!-- have a header, which contains the user's: avatar, then name, and handle on extreme right -->
+          <header class="tweet-list-header">
+            <div class="avatar-name-wrapper">
+              <img class="avatar" src="https://i.imgur.com/z5LNkkB.png">
+              <label name="user-name" class="user-name">Elsie Chiarantini</label>
+            </div>
+            <div>
+              <label class="user-handle">@DrChiarantini28</label>
+            </div>
+          </header>
+          <!-- have a body, which contains the tweet text -->
+          <div class="tweet-list-body">
+            <p class="tweet-line">This is a brand new tweet</p>
+          </div>
+          <!-- have a footer which displays: how long ago tweet was created on the left, and "Flag", "Re-tweet" and "Like" icons upon hovering over the tweet, on the right -->
+          <footer class="tweet-list-footer">
+            <div class="created-on">
+              <p>a few seconds ago</p>
+            </div>
+            <div class="icons">
+              <i class="fa fa-flag"></i>
+              <i class="fa fa-heart"></i>
+              <i class="fa fa-retweet"></i>
+            </div>
+          </footer>
+        </div>
+        <div class="tweet-list">
+          <!-- have a header, which contains the user's: avatar, then name, and handle on extreme right -->
+          <header class="tweet-list-header">
+            <div class="avatar-name-wrapper">
+              <img class="avatar" src="https://i.imgur.com/z5LNkkB.png">
+              <label name="user-name" class="user-name">Gertrude Cousin</label>
+            </div>
+            <div>
+              <label class="user-handle">@Cousin</label>
+            </div>
+          </header>
+          <!-- have a body, which contains the tweet text -->
+          <div class="tweet-list-body">
+            <p class="tweet-line">what's this tweet about?</p>
+          </div>
+          <!-- have a footer which displays: how long ago tweet was created on the left, and "Flag", "Re-tweet" and "Like" icons upon hovering over the tweet, on the right -->
+          <footer class="tweet-list-footer">
+            <div class="created-on">
+              <p>a few seconds ago</p>
+            </div>
+            <div class="icons">
+              <i class="fa fa-flag"></i>
+              <i class="fa fa-heart"></i>
+              <i class="fa fa-retweet"></i>
+            </div>
+          </footer>
+        </div>
+      </article>
+      <button type="button" class="scroll" title="Go to top">Top</button>
+    </section>
+  </main>
+</body>
+
+</html>
