@@ -1,35 +1,16 @@
 import React from 'react';
-import './Tweets.css';
+import { Tweet } from './Tweet';
 
 export const Tweets = (props) => {
-  const {name, handle, avatar, tweet, date} = props;
-  return (
-    <article className="tweet-container">
-      <div className="tweet-list">
-        <header className="tweet-list-header">
-          <div className="avatar-name-wrapper">
-            <img className="avatar" src={avatar} alt=""></img>
-            <label name="user-name" className="user-name">{name}</label>
-          </div>
-          <div>
-            <label className="user-handle">{handle}</label>
-          </div>
-        </header>
-        <div className="tweet-list-body">
-          <p className="tweet-line">{tweet}</p>
-        </div>
-        <footer className="tweet-list-footer">
-          <div className="created-on">
-            <p>{date}</p>
-          </div>
-          <div className="icons">
-            <i className="fa fa-flag"></i>
-            <i className="fa fa-heart"></i>
-            <i className="fa fa-retweet"></i>
-          </div>
-        </footer>
-      </div>
-    </article>
-  );
-};
+  const {tweetData} = props;
 
+  const tweets = tweetData ? tweetData.map((tweetData, index) => {
+    return <Tweet key={index} name={tweetData.name} handle={tweetData.handle} avatar={tweetData.avatar} tweet={tweetData.tweet} date={tweetData.date}/>  }) : "There is no tweet";
+
+
+  return (
+    <section class="tweets">
+    {tweets}
+  </section>
+  )
+}

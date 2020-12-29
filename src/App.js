@@ -3,6 +3,7 @@ import './App.css';
 import { Navigation } from './components/Navigation';
 import { Profile } from './components/Profile';
 import { TweetForm } from './components/TweetForm';
+import { Tweet } from './components/Tweet';
 import { Tweets } from './components/Tweets';
 
 
@@ -27,9 +28,7 @@ function App() {
 
   const [tweetData, setTweetData] = useState(initialTweetData);
 
-  const tweets = tweetData.map((tweetData, index) => {
-    return <Tweets key={index} name={tweetData.name} handle={tweetData.handle} avatar={tweetData.avatar} tweet={tweetData.tweet} date={tweetData.date}/>
-  });
+
 
   const addNewTweet = (tweet) => {
     const newTweet =   {
@@ -47,9 +46,7 @@ function App() {
       <Profile />
       <main class="container">
         <TweetForm addNewTweet={addNewTweet}/>
-        <section class="tweets">
-          {tweets}
-        </section>
+        <Tweets tweetData={tweetData} />
       </main>
     </div>
   );
